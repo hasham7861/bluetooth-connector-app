@@ -9,9 +9,9 @@ def discover_all_devices():
 
     print ("found %d devices" % len(nearby_devices))
 
-    for name, addr in nearby_devices:
-        print (addr, name)
-        devices[addr] = name.decode("utf-8")
+    for addr, name in nearby_devices:
+        print (name, addr)
+        devices[name] = addr.decode("utf-8")
 
     return devices
 
